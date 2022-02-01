@@ -1,0 +1,6 @@
+{
+  "name" : "Task Tracker - production",
+  "mail" : {
+    "host" : "prod-mail-server"
+  }
+}

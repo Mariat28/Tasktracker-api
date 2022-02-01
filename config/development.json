@@ -1,0 +1,6 @@
+{
+  "name" : "Task Tracker - development",
+  "mail" : {
+    "host" : "dev-mail-server"
+  }
+}
