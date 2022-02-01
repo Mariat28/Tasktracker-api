@@ -1,3 +1,5 @@
+const startupDebugger = require('debug')('app:startup');
+const dbdebugger = require('debug')('app:db');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const logger = require('./logger');
