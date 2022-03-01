@@ -1,4 +1,4 @@
-const startupDebugger = require('debug')('app:startup');
+const debug = require('debug')('app:startup');
 const dbdebugger = require('debug')('app:db');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -15,12 +15,14 @@ app.use(helmet());
 //configuration
 console.log('Application Name:' + config.get('name'));
 console.log('Mail Server:' + config.get('mail.host'));
-console.log('Mail Password:' + config.get('mail.password'));
-
+// console.log('Mail Password:' + config.get('mail.password'));
+// templating engine
+// app.set('view engine', pug);
+// app.set('views', './views');
 
 if(app.get('env') === 'development') {
     app.use(morgan('tiny'));
-    console.log('morgan enabled...');
+    debug('morgan enabled...'); // console.log
 }
 app.use(logger);
 app.use(indexRoutes);

@@ -1,4 +1,7 @@
 const Joi = require('joi');
+const express = require('express');
+x
+const app = express();
 
 function indexRoutes() {
   const tasks = [
@@ -7,7 +10,9 @@ function indexRoutes() {
     { id: 3, title: "Post to instagram" },
   ];
   app.get("/", (req, res) => {
-    res.send("Hello world!!");
+    // res.send("Hello world!!");
+    // using pug views 
+    res.render('index', {title: 'My Task Tracker', message: 'Hy there, lets get started'});
   });
   app.get("/api/tasks", (req, res) => {
     res.send(tasks);
